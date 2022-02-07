@@ -16,12 +16,12 @@ my $user = PO_LOGIN->new(sel => $sel,
 					password => 'secret_sauce');
 					
 $user->navigate();
-print"Navigated to the page";
+say ("Navigated to the page");
 $user->getemail();
-print"Entered Email";
+say("Entered Email");
 $user->getpassword();
-print"Entered Password";
+say("Entered Password");
 $user->login();
-print"Clicked Login Button";
+say("Clicked Login Button");
 sleep(5);
 $user->close();
