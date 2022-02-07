@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use PO;
+use lib "PO";
 use PO_LOGIN;
 use Selenium::Remote::Driver;
 my $domain = "https://www.saucedemo.com/";
