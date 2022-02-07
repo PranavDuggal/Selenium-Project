@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use 5.010;
 
 use lib "PO";
 use PO_LOGIN;
@@ -16,7 +17,7 @@ my $user = PO_LOGIN->new(sel => $sel,
 					password => 'secret_sauce');
 					
 $user->navigate();
-say ("Navigated to the page");
+say("Navigated to the page");
 $user->getemail();
 say("Entered Email");
 $user->getpassword();
