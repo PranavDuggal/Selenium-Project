@@ -10,7 +10,7 @@ pipeline {
 		}
 		stage('Deploy'){
 			steps {
-				sh "/usr/bin/perl -w TC_LOGIN.t"
+				sh "/usr/bin/perl -w TC/TC_LOGIN.t"
 			}
 		}
 	}
