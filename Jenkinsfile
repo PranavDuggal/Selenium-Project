@@ -6,13 +6,13 @@ pipeline {
 		
 		stage ('Build Jar'){
 			steps {
-				bat "java -jar -Dwebdriver.chrome.driver=Drivers/chromedriver.exe Drivers/selenium-server-standalone-3.141.59.jar"
+				bat "perl Drivers/selenium-server.pl"
 			}
 			
 		}
 		stage('Deploy'){
 			steps {
-				bat "/usr/bin/perl -w TC/TC_LOGIN.t"
+				bat "perl TC/TC_LOGIN.t"
 			}
 		}
 	}
