@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use 5.010;
-
+use Test::More tests => 4;
 use lib "PO";
 use PO_LOGIN;
 use Selenium::Remote::Driver;
@@ -16,13 +16,14 @@ my $user = PO_LOGIN->new(sel => $sel,
 					username => 'standard_user',
 					password => 'secret_sauce');
 					
-$user->navigate();
+ok($user->navigate());
 say("Navigated to the page");
-$user->getemail();
+ok($user->getemail());
 say("Entered Email");
-$user->getpassword();
+ok($user->getpassword());
 say("Entered Password");
-$user->login();
+ok($user->login());
 say("Clicked Login Button");
 sleep(5);
 $user->close();
+

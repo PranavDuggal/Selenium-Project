@@ -1,7 +1,8 @@
 use strict;
 use warnings;
-
+use lib "PO";
 use PO;
+
 use Selenium::Remote::Driver;
 my $domain = "http://www.google.com";
 my $sel = Selenium::Remote::Driver->new(
@@ -16,3 +17,4 @@ $user->navigate();
 $user->title();
 $user->search();
 $user->button();
+$user->stop();
