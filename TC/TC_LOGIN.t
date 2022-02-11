@@ -5,6 +5,9 @@ use Test::More tests => 4;
 use lib "PO";
 use PO_LOGIN;
 use Selenium::Remote::Driver;
+my @args = ("java" ,"-jar", "-Dwebdriver.chrome.driver = Drivers/chromedriver.exe","Drivers/selenium-server-standalone-3.141.59.jar");
+
+system(@args);
 my $domain = "https://www.saucedemo.com/";
 my $sel = Selenium::Remote::Driver->new(
 	'browser_name' => "chrome",
